@@ -1,10 +1,10 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v2.0.0
+v2.0.1
 
 ### Last Updated:
-11/9/2024
+11/10/2024
 
 
 ## Description
@@ -25,3 +25,5 @@ v2 - 11-10-24
 - Adjusted heapstartutilization from 0.38 to 0.25.
 - Fixed an issue where some lines had double breaks instead of one
 
+v2.0.1 - 11-10-24
+- Improved code by removing more unwanted code
