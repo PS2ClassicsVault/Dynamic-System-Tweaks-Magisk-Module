@@ -232,7 +232,6 @@ persist.sys.display.hdr=true
 ro.config.hdr_display=true
 
 # Display configuration 
-ro.sf.lcd.density=411
 windowsmgr.max_events_per_sec=500
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
