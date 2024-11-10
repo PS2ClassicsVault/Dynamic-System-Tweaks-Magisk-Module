@@ -8,7 +8,7 @@
 
 #Dalvik VM
 dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heaputilization=0.38
+dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
 persist.sys.dalvik.hyperthreading=true
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
@@ -153,7 +153,6 @@ persist.vendor.audio.format.24bit=true
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 
 persist.vendor.audio.delta.refresh=true
 
-
 # Bluetooth configuration
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
@@ -210,14 +209,14 @@ ro.fps.capsmax=120fps
 ro.fps.capsmin=60fps
 hw3d.force=1
 hw2d.force=1
-persist.sys.NV_FPSLIMIT=90
+persist.sys.NV_FPSLIMIT=120
 persist.sys.NV_POWERMODE=1
 persist.sys.NV_PROFVER=15
 persist.sys.NV_STEREOCTRL=0
 persist.sys.NV_STEREOSEPCHG=0
 persist.sys.NV_STEREOSEP=20
-debug.composition.type=dyn
-persist.sys.composition.type=dyn
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
 debug.egl.profiler=1
 debug.egl.hw=1
 debug.sf.hw=1
@@ -225,7 +224,6 @@ ro.fb.mode=1
 video.accelerate.hw=1
 force_hw_ui=true
 ro.hdmi.enable=true
-ro.product.gpu.driver=1
 sys.use_fifo_ui=1
 vendor.display.enable_hdr10_gpu_target=1
 persist.sys.display.hdr=true
@@ -263,14 +261,6 @@ ro.product.max_num_touch=2
 
 # Cellular configuration
 ro.config.hw_fast_dormancy=1
-ro.ril.hep=0
-ro.ril.hsxpa=2
-ro.ril.gprsclass=12
-ro.ril.enable.dtm=1
-ro.ril.hsdpa.category=8
-ro.ril.enable.a53=1
-ro.ril.enable.5g.prefix=1
-ro.ril.hsupa.category=6
 persist.telephony.support.ipv6=1
 persist.telephony.support.ipv4=1
 ro.telephony.call_ring.delay=0
