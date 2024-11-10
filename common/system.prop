@@ -95,7 +95,7 @@ ro.cpufreq.game=1
 # Date configuration
 ro.com.android.dateformat=mm-dd-yyyy
 persist.ntp.server=pool.ntp.org
-persist.backup.ntpserver="north-america.pool.ntp.org"
+persist.backup.ntpserver=north-america.pool.ntp.org
 persist.sys.auto_time_zone=1
 persist.sys.auto_time=1
 persist.ntp.timeout=5000
@@ -155,7 +155,6 @@ persist.vendor.audio.delta.refresh=true
 
 
 # Bluetooth configuration
-ro.bluetooth.hfp.ver=1.7
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
 persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
@@ -186,7 +185,6 @@ ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 # Battery configuration
-ro.batt.capacity=4386
 ro.config.hw_power_saving=1
 pm.sleep_mode=1
 ro.update.battery_threshold=50
@@ -197,7 +195,6 @@ ro.ril.power_collapse=1
 # Wi-Fi configuration
 wifi.supplicant_scan_interval=300
 ro.config.combined_signal=true
-ro.product.wifi=802.11 6e
 
 # Graphics configuration
 persist.sys.ui.hw=1
@@ -209,8 +206,8 @@ ro.config.dha_tunable=1
 debug.overlayui.enable=1
 persist.sys.use_16bpp_alpha=1
 gpu.fps=auto
-ro.fps.capsmax=90fps
-ro.fps.capsmin=30fps
+ro.fps.capsmax=120fps
+ro.fps.capsmin=60fps
 hw3d.force=1
 hw2d.force=1
 persist.sys.NV_FPSLIMIT=90
@@ -355,8 +352,6 @@ ro.HOME_APP_ADJ=1
 # Hardware configuration
 sys.keep.settings=true
 lockscreen.rot_override=true
-ro.hardware.vulkan=mali
-ro.hardware.egl=mali
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicerec=true
 persist.audio.fluence.speaker=false
