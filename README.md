@@ -21,7 +21,7 @@ v1 - 11-09-24
 - Initial release.
 
 v2 - 11-10-24
-- Removed code that wasnot working.
+- Removed code that was not working.
 - Adjusted heapstartutilization from 0.38 to 0.25.
 - Fixed an issue where some lines had double breaks instead of one
 
