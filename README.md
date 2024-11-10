@@ -1,14 +1,14 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v1.0.0
+v2.0.0
 
 ### Last Updated:
 11/9/2024
 
 
 ## Description
-This improves overall System performance without overheating and losing battery power, improve audio quality & more.
+This improves overall System performance without overheating and losing battery power.
 
 
 ## Installation 
@@ -17,7 +17,11 @@ This improves overall System performance without overheating and losing battery 
 4. Enjoy!
 
 ## Changelog
-• [v1 - Initial release - 11-09-24 ]
+v1 - 11-09-24
+- Initial release.
 
-## Requirements:
-You will need to be on Magisk v20 or higher to use this module.
+v2 - 11-10-24
+- Removed code that wasnot working.
+- Adjusted heapstartutilization from 0.38 to 0.25.
+- Fixed an issue where some lines had double breaks instead of one
+
