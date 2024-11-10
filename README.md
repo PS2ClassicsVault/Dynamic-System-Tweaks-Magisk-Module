@@ -8,7 +8,7 @@ v1.0.0
 
 
 ## Description
-This improves overall System performance without overheating and losing battery power.
+This improves overall System performance without overheating and losing battery power, improve audio quality & more.
 
 
 ## Installation 
@@ -18,3 +18,6 @@ This improves overall System performance without overheating and losing battery 
 
 ## Changelog
 • [v1 - Initial release - 11-09-24 ]
+
+## Requirements:
+You will need to be on Magisk v20 or higher to use this module.
