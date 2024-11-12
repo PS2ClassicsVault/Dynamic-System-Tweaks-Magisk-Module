@@ -1,18 +1,10 @@
-Telegram channel:
-https://t.me/playintegrityfix
-
-Device verdict should pass by default.
-If not, try removing /data/adb/pif.json file.
-
 Donations:
-https://www.paypal.com/paypalme/chiteroman
+https://www.paypal.me/CyberGamingStudios
 
-If you are using TrickyStore and you have a valid keybox, but Strong
-isn't passing, maybe you should change the ROM.
-Stock ROMs gives the best results.
+If you encounter bug ir issue please submit a new issue ticket!
 
-# v17.9
+# v2.2
 
-- Update fingerprint to latest beta (thanks to XiaomiEU devs)
-- Fix Shamiko whitelist bug
-- Fix bootloops on XiaomiEU custom roms
+- Fixed a bug where users device would bootloop upon unlocking their device on custom roms.
+-Added new code for swapfile & ZRAM configuration
+-Module is now more dynamic to support all cpu architectures
