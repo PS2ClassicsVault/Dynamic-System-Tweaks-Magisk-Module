@@ -31,5 +31,5 @@ v2.0.1 - 11-10-24
 v2.2 - 11-12-24
 - Fixed a bug where users device would bootloop upon unlocking their device on custom roms.
 - Added new code for swapfile & ZRAM configuration
-- Module is now more dynamic to support all cpu artitechtures
+- Module is now more dynamic to support all cpu architectures
 
