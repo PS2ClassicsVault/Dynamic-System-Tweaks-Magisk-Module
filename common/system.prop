@@ -7,6 +7,11 @@
 ##########################
 
 #Dalvik VM
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=64m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapminfree=16m
+dalvik.vm.heapmaxfree=32m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
@@ -20,14 +25,16 @@ persist.sys.dalvik.vm.lib=libart.so
 # Filesystem configuration
 ro.ext4fs=1
 sys.storage.sdcard.read_ahead_kb=4096
+persist.sys.fstrim.enable=true
 
 # RAM configuration
 persist.sys.purgeable_assets=1
 ro.config.swap.size=4096m
 ro.config.swap=true
-ro.config.swap.path=/storage/emulated/0/swapfile
+ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
 ro.config.zram=true
+ro.config.max_starting_bg=12
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -76,6 +83,7 @@ persist.camera.HAL3.enabled=1
 debug.performance.tuning=1
 ro.cpufreq.governor=ondemand
 ro.sys.cpu.core=auto
+ro.config.dynamic_performance=true
 
 # Date configuration
 ro.com.android.dateformat=mm-dd-yyyy
