@@ -15,22 +15,19 @@ dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
 dalvik.vm.execution-mode=int:jit
-dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-threads=8
-ro.sys.fw.dex2oat_thread_count=8
-dalvik.vm.image-dex2oat-threads=8
 persist.sys.dalvik.vm.lib=libart.so
 
 # Filesystem configuration
 ro.ext4fs=1
+sys.storage.sdcard.read_ahead_kb=4096
 
 # RAM configuration
 persist.sys.purgeable_assets=1
-persist.service.pcsync.enable=0
-persist.service.lgospd.enable=0
-iop.enable_prefetch_ofr=1
-persist.service.zram=1
-ro.zram.default=1
+ro.config.swap.size=4096m
+ro.config.swap=true
+ro.config.swap.path=/storage/emulated/0/swapfile
+ro.config.zram.size=512m
+ro.config.zram=true
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -76,16 +73,9 @@ ro.config.camera.hdr=true
 persist.camera.HAL3.enabled=1
 
 # CPU configuration
-cpu.fps=auto
 debug.performance.tuning=1
-ro.config.enable.hw_accel=true
-ro.config.disable.hw_accel=false
-persist.vendor.enable.thermal.genl=true
-suspend.short_suspend_threshold_millis=2000
-suspend.short_suspend_backoff_enabled=true
-ro.vendor.qti.core_ctl_min_cpu=2
-ro.vendor.qti.core_ctl_max_cpu=8
-ro.cpufreq.game=1
+ro.cpufreq.governor=ondemand
+ro.sys.cpu.core=auto
 
 # Date configuration
 ro.com.android.dateformat=mm-dd-yyyy
@@ -194,42 +184,23 @@ ro.config.combined_signal=true
 persist.sys.ui.hw=1
 debug.egl.force_msaa=1
 debug.egl.buffcount=4
-debug.hwui.renderer=skiagl
 lockscreen.rot_override=true
 ro.config.dha_tunable=1
-debug.overlayui.enable=1
 persist.sys.use_16bpp_alpha=1
-gpu.fps=auto
-ro.fps.capsmax=120fps
-ro.fps.capsmin=60fps
-hw3d.force=1
-hw2d.force=1
-persist.sys.NV_FPSLIMIT=120
-persist.sys.NV_POWERMODE=1
-persist.sys.NV_PROFVER=15
-persist.sys.NV_STEREOCTRL=0
-persist.sys.NV_STEREOSEPCHG=0
-persist.sys.NV_STEREOSEP=20
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
-debug.egl.profiler=1
 debug.egl.hw=1
 debug.sf.hw=1
-ro.fb.mode=1
 video.accelerate.hw=1
-force_hw_ui=true
 ro.hdmi.enable=true
-sys.use_fifo_ui=1
-vendor.display.enable_hdr10_gpu_target=1
-persist.sys.display.hdr=true
-ro.config.hdr_display=true
+debug.hwui.render_dirty_regions=false
 
 # Display configuration 
 windowsmgr.max_events_per_sec=500
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
-persist.sys.scrollingcache=4
+persist.sys.scrollingcache=3
 ro.min_pointer_dur=8
 touch.pressure.scale=0.1
 touch.deviceType=touchScreen
@@ -249,8 +220,6 @@ MultitouchSettleInterval=1ms
 MultitouchMinDistance=1px
 TapInterval=1ms
 TapSlop=1px1
-ro.lcd_brightness=160
-ro.lcd_min_brightness=30
 ro.product.multi_touch_enabled=true
 ro.product.max_num_touch=2
 
@@ -270,14 +239,6 @@ DEVICE_PROVISIONED=1
 ro.telephony.default_network=23
 ro.carrier=Unknown
 persist.data_netmgrd_mtu=1500
-
-# Connection security configuration
-net.core.wmem_max=1048576
-net.core.rmem_max=1048576
-net.core.rmem_default=262144
-net.core.wmem_default=262144
-net.core.optmem_max=20480
-net.unix.max_dgram_qlen=50
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960 net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960
