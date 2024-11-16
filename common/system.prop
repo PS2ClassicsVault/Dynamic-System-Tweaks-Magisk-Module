@@ -35,6 +35,7 @@ ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
 ro.config.zram=true
 ro.config.max_starting_bg=12
+ro.vendor.qti.config.zram=true
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -96,7 +97,7 @@ persist.ntp.timeout=5000
 # Audio configuration
 ro.audio.samplerate=320000
 ro.audio.pcm.samplerate=320000
-af.resample=52000
+af.resample=320000
 af.resampler.quality=320
 dev.pm.dyn_samplingrate=1
 audio.deep_buffer.media=false 
@@ -186,7 +187,17 @@ ro.ril.power_collapse=1
 
 # Wi-Fi configuration
 wifi.supplicant_scan_interval=300
+persist.wifi_scan_interval=300
 ro.config.combined_signal=true
+
+# Google services configuration
+ro.com.google.maps.networklocation=1
+ro.com.google.locationfeatures=1
+ro.opa.eligible_device=true
+ro.opa.eligible_device=1
+ro.config.nocheckin=1
+ro.config.sync=yes
+ro.config.sync.autosync=yes
 
 # Graphics configuration
 persist.sys.ui.hw=1
@@ -247,6 +258,18 @@ DEVICE_PROVISIONED=1
 ro.telephony.default_network=23
 ro.carrier=Unknown
 persist.data_netmgrd_mtu=1500
+persist.radio.nr_mode_pref=1
+persist.radio.nr5g_band=78
+persist.radio.nr5g_bandwidth=100
+persist.radio.nr5g_mimo=4x4
+persist.radio.nr5g_scs=30
+ro.ril.enable.5g=1
+ro.ril.enable.nr=1
+ro.ril.nr_mode=1
+ro.ril.nr5g_band=78
+ro.ril.nr5g_bandwidth=100
+ro.ril.nr5g_mimo=4x4
+ro.ril.nr5g_scs=30
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960 net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960
