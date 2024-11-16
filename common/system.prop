@@ -270,6 +270,7 @@ ro.ril.nr5g_band=78
 ro.ril.nr5g_bandwidth=100
 ro.ril.nr5g_mimo=4x4
 ro.ril.nr5g_scs=30
+persist.sys.radio.force_lte_ca=true
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
