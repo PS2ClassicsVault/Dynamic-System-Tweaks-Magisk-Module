@@ -1,12 +1,14 @@
 Donations:
 https://www.paypal.me/CyberGamingStudios
 
-If you encounter bug ir issue please submit a new issue ticket!
+If you encounter bug or issue please submit a new issue ticket!
 
-# v2.3
+# v2.4
 
-- Improved dalvik VM
-- Improved storage performance when utilizing storage access
-- Set limit on apps to start by 12
-- performance will dynamically scale according to users needs
-- Storage swap file now has a dedicated swap extension.
+- Improved ZRAM configuration
+- Improved Google services
+- Improved Cellular performance in 5G networks
+
+# Known issues:
+
+- There is a chance some devices with A14 will fail to install this module, i am investigating this!

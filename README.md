@@ -1,11 +1,10 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v2.3
+v2.4
 
 ### Last Updated:
-11/12/2024
-
+11/16/024
 
 ## Description
 This improves overall System performance without overheating and losing battery power.
@@ -19,9 +18,3 @@ This improves overall System performance without overheating and losing battery 
 ## Changelog
 [View changelog here](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module/blob/main/changelog.md)
 
-## Magisk Module Requirements:
-- Magisk 20+
-- Root access
-
-## This Magisk Magisk Module is now available in the MMRL Repo "Izzzy Soft":
-https://apt.izzysoft.de/magisk/
