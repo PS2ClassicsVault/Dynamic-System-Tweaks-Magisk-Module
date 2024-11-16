@@ -272,8 +272,11 @@ ro.ril.nr5g_mimo=4x4
 ro.ril.nr5g_scs=30
 
 # Network configuration
-net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960 net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960
-net.tcp.buffersize.umts=4096,8 7380,256960,4096,163 84,256960 net.tcp.buffersize.gprs=4096,8 7380,256960,4096,163 84,256960 net.tcp.buffersize.edge=4096,8 7380,256960,4096,163 84,256960
+net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960
+net.tcp.buffersize.umts=4096,8 7380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,8 7380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,8 7380,256960,4096,163 84,256960
 net.ipv4.tcp_ecn=0
 net.ipv4.route.flush=1
 net.ipv4.tcp_rfc1337=1
