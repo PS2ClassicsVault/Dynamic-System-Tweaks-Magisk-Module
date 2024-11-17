@@ -1,7 +1,7 @@
 id=DynamicSystemTweaks
 name=DynamicSystemTweaks
-version=v2.5
-versionCode=7
+version=v2.6
+versionCode=8
 author=Cyberdev
 description=Improve system performance without battery loss or overheating
 support=https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module/issues
