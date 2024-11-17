@@ -7,11 +7,6 @@
 ##########################
 
 #Dalvik VM
-dalvik.vm.heapsize=512m
-dalvik.vm.heapstartsize=64m
-dalvik.vm.heapgrowthlimit=192m
-dalvik.vm.heapminfree=16m
-dalvik.vm.heapmaxfree=32m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
@@ -29,7 +24,7 @@ persist.sys.fstrim.enable=true
 
 # RAM configuration
 persist.sys.purgeable_assets=1
-ro.config.swap.size=4096m
+ro.config.swap.size=1024m
 ro.config.swap=true
 ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
@@ -206,13 +201,16 @@ debug.egl.buffcount=4
 lockscreen.rot_override=true
 ro.config.dha_tunable=1
 persist.sys.use_16bpp_alpha=1
-debug.composition.type=gpu
-persist.sys.composition.type=gpu
+debug.composition.type=dyn
+persist.sys.composition.type=dyn
 debug.egl.hw=1
 debug.sf.hw=1
 video.accelerate.hw=1
 ro.hdmi.enable=true
 debug.hwui.render_dirty_regions=false
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
 
 # Display configuration 
 windowsmgr.max_events_per_sec=500
@@ -255,8 +253,6 @@ persist.cust.tel.eons=1
 ro.gsm.2nd_data_retry_config=max/_retries=3, 2000, 2000, 2000
 persist.rcs.supported=1
 DEVICE_PROVISIONED=1
-ro.telephony.default_network=23
-ro.carrier=Unknown
 persist.data_netmgrd_mtu=1500
 persist.radio.nr_mode_pref=1
 persist.radio.nr5g_band=78
@@ -271,6 +267,18 @@ ro.ril.nr5g_bandwidth=100
 ro.ril.nr5g_mimo=4x4
 ro.ril.nr5g_scs=30
 persist.sys.radio.force_lte_ca=true
+persist.radio.lte_vrte_ltd=1
+persist.radio.lte_vrte=1
+persist.radio.lte_vrte_ltd=1
+ro.ril.hsxpa=3
+ro.ril.gprsclass=10
+ro.ril.hsdpa.category=10
+ro.ril.hsupa.category=6
+ro.ril.enable.3g.prefix=1
+ro.ril.enable.dtm=1
+ro.ril.gprsclass=12
+ro.ril.hsdpa.category=14
+ro.ril.hsupa.category=6
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
