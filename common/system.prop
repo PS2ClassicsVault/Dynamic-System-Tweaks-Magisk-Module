@@ -6,7 +6,20 @@
 # MULTI-CORE DEX OPT ENABLED
 ##########################
 
-#Dalvik VM
+#Dalvik VM for arm64 devices
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=94m
+dalvik.vm.dex2oat-Xms=94m
+dalvik.vm.dex2oat-Xmx=512m
+
+#Dalvik VM for arm-v7a devices
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=64m
+dalvik.vm.heapgrowthlimit=94m
+dalvik.vm.heapminfree=16m
+dalvik.vm.heapmaxfree=32m
+
+#Dalvik VM for both Architectures
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
