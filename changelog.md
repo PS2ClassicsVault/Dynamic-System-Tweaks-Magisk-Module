@@ -3,9 +3,6 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
-# v2.6
-
+# v2.7
 - Dalvik VM rework
-- Fixed a bug when making a call on Google Fi would not register saying unreachable server.
-- Improved camera quality when taking photos.
-- Added new configuration for 3g, H+ and LTE capable devices.
+- Reworked dex2oat threads (this updates now requires you to have a cpu with 8 cores)

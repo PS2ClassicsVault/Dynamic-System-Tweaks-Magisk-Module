@@ -1,7 +1,7 @@
 id=DynamicSystemTweaks
 name=DynamicSystemTweaks
-version=v2.6
-versionCode=8
+version=v2.7
+versionCode=9
 author=Cyberdev
-description=Improve system performance without battery loss or overheating
+description=Improve system performance without battery loss or overheating (Requires 8 Core CPU)
 support=https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module/issues

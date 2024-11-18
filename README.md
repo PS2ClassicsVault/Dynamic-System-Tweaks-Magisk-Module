@@ -1,20 +1,28 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v2.6
+v2.7
 
 ### Last Updated:
-11/17/24
+11/18/24
 
 ## Description
 This improves overall System performance without overheating and losing battery power.
-
 
 ## Installation 
 1. Flash the module in Magisk
 3. Reboot
 4. Enjoy!
 
+## Requirements:
+- Magisk 20.4 or higher
+- Device that has at least 8 cpu cores
+- Android 10 or higher
+- Rooted device
+
 ## Changelog
 [View changelog here](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module/blob/main/changelog.md)
 
+
+## This module is available in the IzzySoft Magisk Module Repo:
+[IzzySoft Magisk Repo](https://apt.izzysoft.de/magisk/)
