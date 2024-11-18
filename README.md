@@ -1,7 +1,7 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v2.7
+v2.8
 
 ### Last Updated:
 11/18/24
