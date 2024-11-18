@@ -6,20 +6,13 @@
 # MULTI-CORE DEX OPT ENABLED
 ##########################
 
-#Dalvik VM for arm64 devices
-dalvik.vm.image-dex2oat-Xms=64m
-dalvik.vm.image-dex2oat-Xmx=94m
-dalvik.vm.dex2oat-Xms=94m
-dalvik.vm.dex2oat-Xmx=512m
-
-#Dalvik VM for arm-v7a devices
-dalvik.vm.heapsize=512m
-dalvik.vm.heapstartsize=64m
-dalvik.vm.heapgrowthlimit=94m
-dalvik.vm.heapminfree=16m
-dalvik.vm.heapmaxfree=32m
-
-#Dalvik VM for both Architectures
+#Dalvik VM for all architectures
+dalvik.vm.restore-dex2oat-threads=8
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat-swap=true
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7,8
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
@@ -28,6 +21,10 @@ dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
 dalvik.vm.execution-mode=int:jit
+dalvik.vm.usejit=true
+dalvik.vm.jitinitialsize=1m
+dalvik.vm.jitmaxsize=64m
+dalvik.vm.jitthreshold=10000
 persist.sys.dalvik.vm.lib=libart.so
 
 # Filesystem configuration
