@@ -1,7 +1,7 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v2.7
+v2.8
 
 ### Last Updated:
 11/18/24
@@ -16,7 +16,6 @@ This improves overall System performance without overheating and losing battery 
 
 ## Requirements:
 - Magisk 20.4 or higher
-- Device that has at least 8 cpu cores
 - Android 10 or higher
 - Rooted device
 
