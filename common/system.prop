@@ -7,12 +7,6 @@
 ##########################
 
 #Dalvik VM for all architectures
-dalvik.vm.restore-dex2oat-threads=8
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.dex2oat-swap=true
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7,8
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
@@ -20,11 +14,12 @@ persist.sys.dalvik.hyperthreading=true
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
-dalvik.vm.execution-mode=int:jit
-dalvik.vm.usejit=true
-dalvik.vm.jitinitialsize=1m
-dalvik.vm.jitmaxsize=64m
+dalvik.vm.jitinitialsize=8m
+dalvik.vm.jitsize=256m
+dalvik.vm.jitminsize=64m
+dalvik.vm.jitmaxsize=256m
 dalvik.vm.jitthreshold=10000
+dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
 
 # Filesystem configuration
@@ -39,7 +34,7 @@ ro.config.swap=true
 ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
 ro.config.zram=true
-ro.config.max_starting_bg=12
+ro.config.max_starting_bg=15
 ro.vendor.qti.config.zram=true
 
 # Media configuration
