@@ -14,18 +14,22 @@ persist.sys.dalvik.hyperthreading=true
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
-dalvik.vm.jitinitialsize=8m
-dalvik.vm.jitsize=256m
-dalvik.vm.jitminsize=64m
-dalvik.vm.jitmaxsize=256m
-dalvik.vm.jitthreshold=10000
 dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
 
+#Kernel configuration
+ro.config.nocheckin=1
+dalvik.vm.swappiness=60
+dalvik.vm.dirty_background_ratio=10
+dalvik.vm.dirty_ratio=15
+dalvik.vm.min_free_kbytes=4096
+dalvik.vm.overcommit_memory=1
+
 # Filesystem configuration
 ro.ext4fs=1
-sys.storage.sdcard.read_ahead_kb=4096
+persist.sys.storage.sdcard.read_ahead_kb=4096
 persist.sys.fstrim.enable=true
+fs.file-max=65536
 
 # RAM configuration
 persist.sys.purgeable_assets=1
@@ -69,7 +73,6 @@ ro.media.dec.vid.H.264.enabled=1
 ro.media.enc.vid.H.264.enabled=1
 ro.media.dec.vid.mp4.enabled=1
 ro.media.enc.vid.mp4.enabled=1
-ro.media.enc.jpeg.quality=100
 persist.mm.enable.prefetch=true
 mm.enable.smoothstreaming=true
 mm.enable.sec.smoothstreaming=true
@@ -139,7 +142,7 @@ windowsmgr.max_events_per_sec=500
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
-persist.sys.scrollingcache=3
+persist.sys.scrollingcache=4
 ro.min_pointer_dur=8
 touch.pressure.scale=0.1
 touch.deviceType=touchScreen
@@ -235,13 +238,12 @@ net.ipv4.conf.all.accept_source_route=0
 net.ipv4.conf.default.accept_source_route=0
 net.ipv4.udp_rmem_min=6144
 net.ipv4.udp_wmem_min=6144
-net.ipv4.tcp_tw_recycle=1
 net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_tw_recycle=1
 net.ipv4.tcp_syncookies=1
-net.ipv4.tcp_synack_retries=2
-net.ipv4.tcp_syn_retries=2
-net.ipv4.tcp_max_syn_backlog=1024
-net.ipv4.tcp_max_tw_buckets=16384
+net.ipv4.tcp_max_syn_backlog=4096
+net.core.netdev_max_backlog=4096
+net.core.somaxconn=4096
 net.ipv4.icmp_echo_ignore_broadcasts=1
 net.ipv4.icmp_ignore_bogus_error_responses=1
 net.ipv4.tcp_fin_timeout=15
