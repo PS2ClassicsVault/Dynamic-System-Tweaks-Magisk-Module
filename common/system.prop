@@ -20,16 +20,14 @@ persist.sys.dalvik.vm.lib=libart.so
 #Kernel configuration
 ro.config.nocheckin=1
 dalvik.vm.swappiness=60
-dalvik.vm.dirty_background_ratio=10
-dalvik.vm.dirty_ratio=15
-dalvik.vm.min_free_kbytes=4096
-dalvik.vm.overcommit_memory=1
 
 # Filesystem configuration
 ro.ext4fs=1
 persist.sys.storage.sdcard.read_ahead_kb=4096
 persist.sys.fstrim.enable=true
-fs.file-max=65536
+ro.sys.sdcardfs=true
+ro.io.scheduler=cfq
+persist.sys.use_fstrim=1
 
 # RAM configuration
 persist.sys.purgeable_assets=1
@@ -40,6 +38,7 @@ ro.config.zram.size=512m
 ro.config.zram=true
 ro.config.max_starting_bg=15
 ro.vendor.qti.config.zram=true
+ro.ksm.enable=1
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -51,6 +50,7 @@ media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.enable-record=true
 media.stagefright.audio.deep=true
+media.camera.ts.monotonic=1
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
@@ -120,14 +120,13 @@ ro.config.sync=yes
 ro.config.sync.autosync=yes
 
 # Graphics configuration
-persist.sys.ui.hw=1
 debug.egl.force_msaa=1
 debug.egl.buffcount=4
 lockscreen.rot_override=true
 ro.config.dha_tunable=1
-persist.sys.use_16bpp_alpha=1
-debug.composition.type=dyn
-persist.sys.composition.type=dyn
+persist.sys.use_16bpp_alpha=0
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
 debug.egl.hw=1
 debug.sf.hw=1
 video.accelerate.hw=1
@@ -136,12 +135,15 @@ debug.hwui.render_dirty_regions=false
 ro.media.enc.jpeg.quality=100
 ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
+ro.max.fps=120
+ro.min.fps=60
 
 # Display configuration 
 windowsmgr.max_events_per_sec=500
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
+ro.sf.compbypass=0
 persist.sys.scrollingcache=4
 ro.min_pointer_dur=8
 touch.pressure.scale=0.1
@@ -260,6 +262,8 @@ net.tcp.default_init_rwnd=60
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
 ro.HOME_APP_ADJ=1
+ro.FOREGROUND_APP_ADJ=0
+ro.BACKGROUND_APP_ADJ=2
 
 # Hardware configuration
 sys.keep.settings=true
