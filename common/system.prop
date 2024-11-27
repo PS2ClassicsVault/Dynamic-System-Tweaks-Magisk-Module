@@ -36,7 +36,7 @@ ro.config.swap=true
 ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
 ro.config.zram=true
-ro.config.max_starting_bg=15
+ro.config.max_starting_bg=20
 ro.vendor.qti.config.zram=true
 ro.ksm.enable=1
 
@@ -118,6 +118,19 @@ ro.opa.eligible_device=1
 ro.config.nocheckin=1
 ro.config.sync=yes
 ro.config.sync.autosync=yes
+persist.chrome.flags=--enable-gpu-rasterization --enable-zero-copy
+
+# GPS configuration
+ro.navigation.speed=1
+ro.navigation.accuracy=1
+ro.gps.lpp=1
+ro.gps.lpp_profile=1
+ro.gps.agps_enabled=1
+ro.gps.agps_mode=2
+ro.gps.agps_provider=1
+ro.gps.agps_server=supl.google.com
+ro.gps.agps_port=7276
+ro.networklocation.provider=1
 
 # Graphics configuration
 debug.egl.force_msaa=1
