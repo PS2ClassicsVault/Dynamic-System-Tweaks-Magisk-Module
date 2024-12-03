@@ -88,6 +88,23 @@ debug.performance.tuning=1
 ro.cpufreq.governor=ondemand
 ro.sys.cpu.core=auto
 ro.config.dynamic_performance=true
+ro.config.cpu_freq_scaling=1
+ro.config.thermal_threshold=70
+
+# Sensor configuration
+sensor.accelerometer.batch=1
+sensor.accelerometer.max_batch_report_latency=1000000
+sensor.gyroscope.batch=1
+sensor.gyroscope.max_batch_report_latency=1000000
+sensor.light.batch=1
+sensor.light.max_batch_report_latency=1000000
+ro.lge.proximity.delay=25
+mot.proximity.delay=25
+persist.sys.fingerprint.sensortype=goodix
+persist.sys.fingerprint.sensortype=1
+persist.sys.fp.goodix=1
+persist.sys.fp.accuracy=1
+ro.hardware.fingerprint.delay=0
 
 # Date configuration
 ro.com.android.dateformat=mm-dd-yyyy
