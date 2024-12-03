@@ -1,10 +1,10 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v3.2
+v3.3
 
 ### Last Updated:
-11/26/24
+12/03/24
 
 ## Description
 This improves overall System performance without overheating and losing battery power.

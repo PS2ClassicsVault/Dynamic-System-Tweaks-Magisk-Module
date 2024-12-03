@@ -3,6 +3,8 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
-# v3.2
-- Increased startup background max limit from 15 to 20 to help with extra head room for system applications.
-- Improved GPS performance & location performance
+# v3.3
+- Improved Fingerprint, Gryo, Light, Accelerometer & Proximity sensors performance
+- Improved thermals sensors
+- Set thermal sensor to begin throttling when device hits 70°C to reduce heat without harming performance.
+- Set cpu frequency to dynamically increase/decrease frequency depending on the users tasks.
