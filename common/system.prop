@@ -89,7 +89,7 @@ ro.cpufreq.governor=ondemand
 ro.sys.cpu.core=auto
 ro.config.dynamic_performance=true
 ro.config.cpu_freq_scaling=1
-ro.config.thermal_threshold=80
+ro.config.thermal_threshold=75
 
 # Sensor configuration
 sensor.accelerometer.batch=1
