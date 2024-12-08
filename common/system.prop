@@ -23,11 +23,22 @@ dalvik.vm.swappiness=60
 
 # Filesystem configuration
 ro.ext4fs=1
+ro.config.filesystem_performance=1
 persist.sys.storage.sdcard.read_ahead_kb=4096
+persist.sys.storage.read_ahead_kb=4096
 persist.sys.fstrim.enable=true
 ro.sys.sdcardfs=true
-ro.io.scheduler=cfq
 persist.sys.use_fstrim=1
+ro.config.ufs_performance=1
+persist.sys.io.scheduler=cfq
+persist.sys.storage.ufs.read_ahead_kb=4096
+ro.config.ufs_write_booster=1
+ro.config.ufs_latency=0
+ro.config.ufs_deep_sleep=1
+ro.ext4.writeback=1
+ro.ext4.latency=0
+ro.ext4.deep_sleep=1
+persist.sys.storage.ext4.read_ahead_kb=4096
 
 # RAM configuration
 persist.sys.purgeable_assets=1
