@@ -312,16 +312,6 @@ net.ipv6.conf.default.accept_redirects=0
 net.ipv6.conf.all.use_tempaddr=2
 net.ipv6.conf.default.use_tempaddr=2
 net.tcp.default_init_rwnd=60
-net.wlan0.dns1=8.8.8.8
-net.wlan0.dns2=8.8.4.4
-net.pdp0.dns1=8.8.8.8
-net.pdp0.dns2=8.8.4.4
-net.ppp0.dns1=8.8.8.8
-net.ppp0.dns2=8.8.4.4
-net.eth0.dns1=8.8.8.8
-net.eth0.dns2=8.8.4.4
-net.gprs.dns1=8.8.8.8
-net.gprs.dns2=8.8.4.4
 
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
