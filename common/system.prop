@@ -16,6 +16,7 @@ dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
 dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
+persist.sys.dalvik.vm.lib.2=libartd.so
 
 #Kernel configuration
 ro.config.nocheckin=1
@@ -39,6 +40,7 @@ ro.ext4.writeback=1
 ro.ext4.latency=0
 ro.ext4.deep_sleep=1
 persist.sys.storage.ext4.read_ahead_kb=4096
+persist.sys.isUsbOtgEnabled=1
 
 # RAM configuration
 persist.sys.purgeable_assets=1
@@ -93,6 +95,10 @@ drm.service.enabled=true
 persist.camera.HDR=true
 ro.config.camera.hdr=true
 persist.camera.HAL3.enabled=1
+ro.media.capture.flash=led
+ro.media.capture.flashMinV=3300000
+ro.media.capture.torchIntensity=65
+ro.media.capture.flashIntensity=70
 
 # CPU configuration
 debug.performance.tuning=1
@@ -160,6 +166,10 @@ ro.gps.agps_server=supl.google.com
 ro.gps.agps_port=7276
 ro.networklocation.provider=1
 
+# Audio notification configuration
+audio.safemedia.bypass=true
+audio.safemedia.force=false
+
 # Graphics configuration
 debug.egl.force_msaa=1
 debug.egl.buffcount=4
@@ -178,6 +188,9 @@ ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
 ro.max.fps=120
 ro.min.fps=60
+hwui.use_gpu_pixel_buffers=true
+persist.sys.ui.hw=true
+debug.gr.numframebuffers=3
 
 # Display configuration 
 windowsmgr.max_events_per_sec=500
@@ -299,6 +312,16 @@ net.ipv6.conf.default.accept_redirects=0
 net.ipv6.conf.all.use_tempaddr=2
 net.ipv6.conf.default.use_tempaddr=2
 net.tcp.default_init_rwnd=60
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.pdp0.dns1=8.8.8.8
+net.pdp0.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
 
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
