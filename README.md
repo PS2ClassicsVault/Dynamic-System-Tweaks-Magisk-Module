@@ -1,10 +1,10 @@
 # Dynamic System Tweaks Magisk Module
 
 ### Version:
-v3.6
+v4.0 (Final release)
 
 ### Last Updated:
-12/13/24
+12/14/24
 
 ## Description
 This improves overall System performance without overheating and losing battery power.
@@ -25,3 +25,6 @@ This improves overall System performance without overheating and losing battery 
 
 ## This module is available in the IzzySoft Magisk Module Repo:
 [IzzySoft Magisk Repo](https://apt.izzysoft.de/magisk/)
+
+## Notice:
+This module is no longer being updated as it has reached it's most stable build.

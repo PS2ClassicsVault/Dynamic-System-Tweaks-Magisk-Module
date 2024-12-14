@@ -3,9 +3,9 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
-# v3.6
-- Improved flashlight and camera flash intensity.
-- Disabled High volume notification when listening to audio on high volume for long periods of time.
-- Improved
-- Set USB OTG to be no longer disabled by software by default..
-- Improved system UI composition.
+# v4.0 (Final release)
+- Added dex2oat threads line for optimal dalvik performance and set it to use 4 cpu cores by default.
+-Set dalvik-execution to int:fast
+
+
+# Note: if you experience any bugs please report them so i can apply any hotfox to them otherwise i will no longer be updating this module this is the final release!
