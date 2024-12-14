@@ -2,19 +2,21 @@
 # Example: Change dpi
 # ro.sf.lcd_density=320
 
-##########################
-# MULTI-CORE DEX OPT ENABLED
-##########################
+##############################
+# MULTI-CORE DEX OPT ENABLED #
+##############################
 
 #Dalvik VM for all architectures
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.boot-dex2oat-threads=4
 persist.sys.dalvik.multithread=true
 persist.sys.dalvik.hyperthreading=true
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
-dalvik.vm.execution-mode=int:jit
+dalvik.vm.execution-mode=int:fast
 persist.sys.dalvik.vm.lib=libart.so
 persist.sys.dalvik.vm.lib.2=libartd.so
 
