@@ -8,4 +8,5 @@ If you encounter bug or issue please submit a new issue ticket!
 -Set dalvik-execution to int:fast
 
 
-# Note: if you experience any bugs please report them so i can apply any hotfox to them otherwise i will no longer be updating this module this is the final release!
+# Note: 
+If you experience any bugs please report them so i can apply any hotfix to them otherwise i will no longer be updating this module this is the final release!
