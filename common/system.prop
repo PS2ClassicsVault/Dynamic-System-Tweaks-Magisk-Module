@@ -9,16 +9,12 @@
 #Dalvik VM for all architectures
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
-dalvik.vm.dex2oat-threads=4
-dalvik.vm.boot-dex2oat-threads=4
 persist.sys.dalvik.multithread=true
-persist.sys.dalvik.hyperthreading=true
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
-dalvik.vm.execution-mode=int:fast
+dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
-persist.sys.dalvik.vm.lib.2=libartd.so
 
 #Kernel configuration
 ro.config.nocheckin=1
@@ -43,6 +39,20 @@ ro.ext4.latency=0
 ro.ext4.deep_sleep=1
 persist.sys.storage.ext4.read_ahead_kb=4096
 persist.sys.isUsbOtgEnabled=1
+persist.sys.storage_preload=1
+persist.radio.no_wait_for_card=1
+
+# Widevine configuration
+ro.com.widevine.cachesize=16777216
+
+# Facelock configuration
+ro.facelock.black_timeout=1250
+ro.facelock.det_timeout=1500
+ro.facelock.rec_timeout=2500
+ro.facelock.lively_timeout=2500
+ro.facelock.est_max_time=1000
+ro.facelock.use_intro_anim=true
+ro.media.effect.bgdropper.adj=0.2
 
 # RAM configuration
 persist.sys.purgeable_assets=1
@@ -51,7 +61,7 @@ ro.config.swap=true
 ro.config.swap.path=/storage/emulated/0/swapfile.swp
 ro.config.zram.size=512m
 ro.config.zram=true
-ro.config.max_starting_bg=20
+ro.config.max_starting_bg=25
 ro.vendor.qti.config.zram=true
 ro.ksm.enable=1
 
@@ -168,10 +178,6 @@ ro.gps.agps_server=supl.google.com
 ro.gps.agps_port=7276
 ro.networklocation.provider=1
 
-# Audio notification configuration
-audio.safemedia.bypass=true
-audio.safemedia.force=false
-
 # Graphics configuration
 debug.egl.force_msaa=1
 debug.egl.buffcount=4
@@ -190,7 +196,7 @@ ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
 ro.max.fps=120
 ro.min.fps=60
-hwui.use_gpu_pixel_buffers=true
+sys.hwc.gpu_perf_mode=1
 persist.sys.ui.hw=true
 debug.gr.numframebuffers=3
 
@@ -318,8 +324,6 @@ net.tcp.default_init_rwnd=60
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
 ro.HOME_APP_ADJ=1
-ro.FOREGROUND_APP_ADJ=0
-ro.BACKGROUND_APP_ADJ=2
 
 # Hardware configuration
 sys.keep.settings=true
