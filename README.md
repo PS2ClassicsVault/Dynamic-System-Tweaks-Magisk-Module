@@ -30,4 +30,4 @@ This improves overall System performance without overheating and losing battery 
 This module is no longer being updated as it has reached it's most stable build.
 
 ## Announcement:
-I plan to make a new version of this module but only for arm64-v8a devices, this means the new version will have more features, but will not work on armeabi-v7a devices due to utilizing tweaks for arm64 devices that would bootloop on non-arm64 devices.
+I plan to make a new version of this module but only for arm64-v8a devices, this means the new version will have more features, but will not work on armeabi-v7a devices due to utilizing tweaks for arm64 devices that would bootloop on non-arm64 devices. The new revision will not affect this repository and be in its separate repository.
