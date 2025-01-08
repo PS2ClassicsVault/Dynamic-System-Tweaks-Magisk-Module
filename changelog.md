@@ -3,9 +3,18 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
-# v4.0HF (Final release)
-- Fixed an issue where noticable stutter was ouccuring this is now fixed.
-- Made improvements to facelock timeouts, HWUI gpu rendering and widevine cache values 
+# v4.1
+- Added dalvik.vm.heapsize tweaks for better optimal app performance.
+- Decrased the dalvik.vm.heaputilization= from 0.75 to 0.25
+- Set I/O scheduler from cfq to auto
+- Set 16pp to enables for optimal dithering performance.
 
 # Note: 
-If you experience any bugs please report them so i can apply any hotfix to them otherwise i will no longer be updating this module this is the final release!
+If you experience any bugs please report them so i can apply any hotfix to them. 
+
+# Additional Note(s):
+We recommend using this module for devices that are armeabi-v7a, however though this will not impact your device(s) performance if your using this module on a device that is arm64-v8a only, but you will have a better performance using this version using a device that is armeabi-v7a or devices that has backward compatibility with armeabi-v7a.
+
+If you only have an arm64-v8a device with no backwards compatibility with armeabi-v7a applications, we recommend using are arm64 version of this module which is intended for that specific architecture: [DynamicSystemTweaks-arm64(https://github.com/PS2ClassicsVault/DynamicSystemTweaks-arm64-Magisk-Module) this new module can also be installed via MMRL through IzzySoft"s Magisk Repo.
+
+
