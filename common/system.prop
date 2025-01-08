@@ -7,6 +7,9 @@
 ##############################
 
 #Dalvik VM for all architectures
+dalvik.vm.heapstartsize=64m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapsize=512m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 persist.sys.dalvik.multithread=true
@@ -29,7 +32,7 @@ persist.sys.fstrim.enable=true
 ro.sys.sdcardfs=true
 persist.sys.use_fstrim=1
 ro.config.ufs_performance=1
-persist.sys.io.scheduler=cfq
+persist.sys.io.scheduler=auto
 persist.sys.storage.ufs.read_ahead_kb=4096
 ro.config.ufs_write_booster=1
 ro.config.ufs_latency=0
@@ -183,7 +186,7 @@ debug.egl.force_msaa=1
 debug.egl.buffcount=4
 lockscreen.rot_override=true
 ro.config.dha_tunable=1
-persist.sys.use_16bpp_alpha=0
+persist.sys.use_16bpp_alpha=1
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
 debug.egl.hw=1
