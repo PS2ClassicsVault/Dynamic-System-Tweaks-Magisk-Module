@@ -6,7 +6,20 @@
 # MULTI-CORE DEX OPT ENABLED #
 ##############################
 
-#Dalvik VM for all architectures
+# HWUI configuration
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
+
+# Dalvik VM for all architectures
 dalvik.vm.heapstartsize=64m
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapsize=512m
@@ -18,35 +31,24 @@ dalvik.vm.stack-trace-file=/data/anr/traces.txt
 dalvik.vm.jmiopts=forcecopy
 dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
+dalvik.vm.lockprof.threshold=500
 
-#Kernel configuration
-ro.config.nocheckin=1
-dalvik.vm.swappiness=60
+# HWUI configuration
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
 
-# Filesystem configuration
-ro.ext4fs=1
-ro.config.filesystem_performance=1
-persist.sys.storage.sdcard.read_ahead_kb=4096
-persist.sys.storage.read_ahead_kb=4096
-persist.sys.fstrim.enable=true
-ro.sys.sdcardfs=true
-persist.sys.use_fstrim=1
-ro.config.ufs_performance=1
-persist.sys.io.scheduler=auto
-persist.sys.storage.ufs.read_ahead_kb=4096
-ro.config.ufs_write_booster=1
-ro.config.ufs_latency=0
-ro.config.ufs_deep_sleep=1
-ro.ext4.writeback=1
-ro.ext4.latency=0
-ro.ext4.deep_sleep=1
-persist.sys.storage.ext4.read_ahead_kb=4096
+# USB configuration
 persist.sys.isUsbOtgEnabled=1
-persist.sys.storage_preload=1
-persist.radio.no_wait_for_card=1
-
-# Widevine configuration
-ro.com.widevine.cachesize=16777216
+persist.sys.usb.config=mtp,adb
 
 # Facelock configuration
 ro.facelock.black_timeout=1250
@@ -59,14 +61,6 @@ ro.media.effect.bgdropper.adj=0.2
 
 # RAM configuration
 persist.sys.purgeable_assets=1
-ro.config.swap.size=1024m
-ro.config.swap=true
-ro.config.swap.path=/storage/emulated/0/swapfile.swp
-ro.config.zram.size=512m
-ro.config.zram=true
-ro.config.max_starting_bg=25
-ro.vendor.qti.config.zram=true
-ro.ksm.enable=1
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -95,12 +89,18 @@ vidc.enc.disable_bframes=1
 ro.media.enc.hprof.vid.fps=90
 encoder.video.profile=high
 vendor.vidc.dec.enable.downscalar=1
+ro.media.dec.aud.wma.enabled=1
 ro.media.dec.vid.wmv.enabled=1
-ro.media.enc.vid.wmv.enabled=1
-ro.media.dec.vid.H.264.enabled=1
-ro.media.enc.vid.H.264.enabled=1
+ro.media.dec.aud.mp3.enabled=1
 ro.media.dec.vid.mp4.enabled=1
+ro.media.enc.aud.wma.enabled=1
+ro.media.enc.vid.wmv.enabled=1
+ro.media.enc.aud.mp3.enabled=1
 ro.media.enc.vid.mp4.enabled=1
+ro.media.dec.aud.flac.enabled=1
+ro.media.dec.vid.H.264.enabled=1
+ro.media.enc.aud.flac.enabled=1
+ro.media.enc.vid.H.264.enabled=1
 persist.mm.enable.prefetch=true
 mm.enable.smoothstreaming=true
 mm.enable.sec.smoothstreaming=true
@@ -114,11 +114,13 @@ ro.media.capture.flash=led
 ro.media.capture.flashMinV=3300000
 ro.media.capture.torchIntensity=65
 ro.media.capture.flashIntensity=70
+libplayer.livets.softdemux=1
+libplayer.netts.recalcpts=1
+media.libplayer.seek.fwdsearch=1
+media.player.forcemp3softdec=true
 
 # CPU configuration
 debug.performance.tuning=1
-ro.cpufreq.governor=ondemand
-ro.sys.cpu.core=auto
 ro.config.dynamic_performance=true
 ro.config.cpu_freq_scaling=1
 ro.config.thermal_threshold=75
@@ -146,17 +148,9 @@ persist.sys.auto_time_zone=1
 persist.sys.auto_time=1
 persist.ntp.timeout=5000
 
-# Battery configuration
-ro.config.hw_power_saving=1
-pm.sleep_mode=1
-ro.update.battery_threshold=50
-power.saving.mode=1
-ro.ril.disable.power.collapse=0
-ro.ril.power_collapse=1
-
 # Wi-Fi configuration
-wifi.supplicant_scan_interval=300
-persist.wifi_scan_interval=300
+wifi.supplicant_scan_interval=180
+persist.wifi_scan_interval=180
 ro.config.combined_signal=true
 
 # Google services configuration
@@ -182,24 +176,16 @@ ro.gps.agps_port=7276
 ro.networklocation.provider=1
 
 # Graphics configuration
+ro.opengles.version=196610
 debug.egl.force_msaa=1
-debug.egl.buffcount=4
-lockscreen.rot_override=true
+debug.egl.buffcount=3
 ro.config.dha_tunable=1
-persist.sys.use_16bpp_alpha=1
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
 debug.egl.hw=1
 debug.sf.hw=1
 video.accelerate.hw=1
 ro.hdmi.enable=true
-debug.hwui.render_dirty_regions=false
-ro.media.enc.jpeg.quality=100
-ro.media.dec.jpeg.memcap=8000000
-ro.media.enc.hprof.vid.bps=8000000
-ro.max.fps=120
-ro.min.fps=60
-sys.hwc.gpu_perf_mode=1
 persist.sys.ui.hw=true
 debug.gr.numframebuffers=3
 
@@ -271,6 +257,14 @@ ro.ril.enable.dtm=1
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=14
 ro.ril.hsupa.category=6
+net.tethering.noproxy=true
+ro.carrier=Unknown
+persist.radio.volte.dan_support=true
+persist.radio.rat_on=combine
+persist.radio.data_ltd_sys_ind=1
+persist.radio.data_con_rprt=1
+persist.radio.calls.on.ims=1
+persist.radio.VT_ENABLE=1
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
@@ -326,12 +320,22 @@ net.tcp.default_init_rwnd=60
 
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
-ro.HOME_APP_ADJ=1
+
+# Wireless + TCP Speed & Security Tweaks
+net.core.wmem_max=1048576
+net.core.rmem_max=1048576
+net.core.rmem_default=262144
+net.core.wmem_default=262144
+net.core.optmem_max=20480
+net.unix.max_dgram_qlen=50
 
 # Hardware configuration
 sys.keep.settings=true
 lockscreen.rot_override=true
 use.voice.path.for.pcm.voip=true
-debug.egl.swapinterval=60
+ro.hardware.qemu=0
+ro.storage_manager.enabled=true
+ro.sys.fw.use_trim_settings=true
+ro.trim.config=true
 
 #####Cyberdev#####
