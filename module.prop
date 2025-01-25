@@ -1,7 +1,7 @@
 id=DynamicSystemTweaks
 name=DynamicSystemTweaks
-version=v4.1
-versionCode=21
+version=v4.2
+versionCode=22
 author=Cyberdev
 description=Improves system performance without battery loss or overheating (Android 10+)
 support=https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module/issues
