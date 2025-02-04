@@ -1,10 +1,10 @@
 # Dynamic System Tweaks Magisk Module for armeabi-v7a devices
 
 ### Version:
-v4.2
+v4.3
 
 ### Last Updated:
-01/25/25
+02/04/25
 
 ## Description
 This improves overall System performance without overheating and losing battery power for armeabi-v7a devices

@@ -3,6 +3,11 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
+# v4.3
+- Improved ART compiling speed for apps.
+- Removed HWUI since it ultimately made the OS a bit slower.
+- Removed the multithread tweak since most devices on Android 10+ are already utilizing multi threading by default anyways.
+
 # v4.2
 - Improved modules performance.
 - Added HWUI tweak for optimal performance.
