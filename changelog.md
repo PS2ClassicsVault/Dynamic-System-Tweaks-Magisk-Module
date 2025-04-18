@@ -3,6 +3,11 @@ https://www.paypal.me/CyberGamingStudios
 
 If you encounter bug or issue please submit a new issue ticket!
 
+# v4.4
+- Improved performance
+- Improved tweaks
+- Reduced fingerprint size.
+
 # v4.3
 - Improved ART compiling speed for apps.
 - Removed HWUI since it ultimately made the OS a bit slower.
@@ -13,7 +18,7 @@ If you encounter bug or issue please submit a new issue ticket!
 - Added HWUI tweak for optimal performance.
 - Added a new tweak that fixes black screen videos
 - Added new tweak that fixes videos being blocked.
-- Reduced ehl buff count from 4 to 3
+- Reduced egl buff count from 4 to 3
 
 # Note: 
 If you experience any bugs please report them so i can apply any hotfix to them. 
