@@ -7,29 +7,12 @@
 ##############################
 
 # Dalvik VM for all architectures
-dalvik.vm.heapstartsize=64m
-dalvik.vm.heapgrowthlimit=192m
-dalvik.vm.heapsize=512m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
-dalvik.vm.jmiopts=forcecopy
 dalvik.vm.execution-mode=int:jit
 persist.sys.dalvik.vm.lib=libart.so
-dalvik.vm.usejit=false
-dalvik.vm.lockprof.threshold=500
-dalvik.vm.check-dex-sum=false
-dalvik.vm.checkjni=false
-dalvik.vm.verify-bytecode=false
-dalvik.gc.type=generational_cc
-dalvik.vm.systemservercompilerfilter=speed-profile
-dalvik.vm.systemuicompilerfilter=speed-profile
-dalvik.vm.usap_pool_enabled=true
-
-# USB configuration
-persist.sys.isUsbOtgEnabled=1
-persist.sys.usb.config=mtp,adb
 
 # Facelock configuration
 ro.facelock.black_timeout=1250
@@ -102,9 +85,6 @@ media.player.forcemp3softdec=true
 
 # CPU configuration
 debug.performance.tuning=1
-ro.config.dynamic_performance=true
-ro.config.cpu_freq_scaling=1
-ro.config.thermal_threshold=75
 
 # Sensor configuration
 sensor.accelerometer.batch=1
@@ -158,7 +138,7 @@ ro.networklocation.provider=1
 
 # Graphics configuration
 debug.egl.force_msaa=1
-debug.egl.buffcount=3
+debug.egl.buffcount=4
 ro.config.dha_tunable=1
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
@@ -301,21 +281,9 @@ net.tcp.default_init_rwnd=60
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
 
-# Wireless + TCP Speed & Security Tweaks
-net.core.wmem_max=1048576
-net.core.rmem_max=1048576
-net.core.rmem_default=262144
-net.core.wmem_default=262144
-net.core.optmem_max=20480
-net.unix.max_dgram_qlen=50
-
 # Hardware configuration
-sys.keep.settings=true
 lockscreen.rot_override=true
 use.voice.path.for.pcm.voip=true
 ro.hardware.qemu=0
-ro.storage_manager.enabled=true
-ro.sys.fw.use_trim_settings=true
-ro.trim.config=true
 
 #####Cyberdev#####
