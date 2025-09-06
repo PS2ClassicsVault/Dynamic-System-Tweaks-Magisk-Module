@@ -4,7 +4,7 @@
 v4.5
 
 ### Last Updated:
-09/96/25
+09/06/25
 
 ## Description
 This improves overall System performance without overheating and losing battery power for armeabi-v7a devices
