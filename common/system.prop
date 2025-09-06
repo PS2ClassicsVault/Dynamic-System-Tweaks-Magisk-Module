@@ -11,7 +11,7 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heaputilization=0.25
 dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
-dalvik.vm.execution-mode=int:jit
+dalvik.vm.execution-mode=int:fast
 persist.sys.dalvik.vm.lib=libart.so
 
 # Facelock configuration
@@ -25,6 +25,10 @@ ro.media.effect.bgdropper.adj=0.2
 
 # RAM configuration
 persist.sys.purgeable_assets=1
+debug.kill_allocating_task=0
+
+# Boot configuration
+boot.fps=60
 
 # Media configuration
 media.stagefright.enable-http=true
@@ -36,52 +40,17 @@ media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.enable-record=true
 media.stagefright.audio.deep=true
-media.camera.ts.monotonic=1
+persist.sys.media.use-awesome=1
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
-persist.audio.fluence.mode=endfire
-persist.audio.vr.enable=true
-persist.audio.handset.mic=digital
-mpq.audio.decode=true
-persist.sys.media.use-awesome=1
-ro.media.enc.jpeg.quality=100
-persist.mm.enable.prefetch=true
-vidc.dec.downscalar_width=2400
-vidc.dec.downscalar_height=1080
-vidc.enc.disable_bframes=1
-ro.media.enc.hprof.vid.fps=90
-encoder.video.profile=high
-vendor.vidc.dec.enable.downscalar=1
-ro.media.dec.aud.wma.enabled=1
-ro.media.dec.vid.wmv.enabled=1
-ro.media.dec.aud.mp3.enabled=1
-ro.media.dec.vid.mp4.enabled=1
-ro.media.enc.aud.wma.enabled=1
-ro.media.enc.vid.wmv.enabled=1
-ro.media.enc.aud.mp3.enabled=1
-ro.media.enc.vid.mp4.enabled=1
-ro.media.dec.aud.flac.enabled=1
-ro.media.dec.vid.H.264.enabled=1
-ro.media.enc.aud.flac.enabled=1
-ro.media.enc.vid.H.264.enabled=1
-persist.mm.enable.prefetch=true
-mm.enable.smoothstreaming=true
-mm.enable.sec.smoothstreaming=true
-persist.mm.sta.enable=1
-mm.mpeg4dp.hw.support=true
-drm.service.enabled=true
-persist.camera.HDR=true
-ro.config.camera.hdr=true
-persist.camera.HAL3.enabled=1
-ro.media.capture.flash=led
-ro.media.capture.flashMinV=3300000
-ro.media.capture.torchIntensity=65
-ro.media.capture.flashIntensity=70
-libplayer.livets.softdemux=1
-libplayer.netts.recalcpts=1
-media.libplayer.seek.fwdsearch=1
-media.player.forcemp3softdec=true
+
+# Bluetooth configuration
+ro.bluetooth.emb_wp_mode=true
+ro.bluetooth.wipower=true
+persist.bluetooth.driver_override=1
+bluetooth.sleepmode=false
+persist.bluetooth.gaming_mode=1
 
 # CPU configuration
 debug.performance.tuning=1
@@ -104,7 +73,7 @@ ro.hardware.fingerprint.delay=0
 # Date configuration
 ro.com.android.dateformat=mm-dd-yyyy
 persist.ntp.server=pool.ntp.org
-persist.backup.ntpserver=north-america.pool.ntp.org
+persist.backup.ntpserver=0.pool.ntp.org
 persist.sys.auto_time_zone=1
 persist.sys.auto_time=1
 persist.ntp.timeout=5000
@@ -113,12 +82,11 @@ persist.ntp.timeout=5000
 wifi.supplicant_scan_interval=180
 persist.wifi_scan_interval=180
 ro.config.combined_signal=true
+ro.config.hw_new_wifitopdp=1
 
 # Google services configuration
 ro.com.google.maps.networklocation=1
 ro.com.google.locationfeatures=1
-ro.opa.eligible_device=true
-ro.opa.eligible_device=1
 ro.config.nocheckin=1
 ro.config.sync=yes
 ro.config.sync.autosync=yes
@@ -138,19 +106,19 @@ ro.networklocation.provider=1
 
 # Graphics configuration
 debug.egl.force_msaa=1
-debug.egl.buffcount=4
-ro.config.dha_tunable=1
+debug.egl.buffcount=3
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
 debug.egl.hw=1
 debug.sf.hw=1
 video.accelerate.hw=1
 ro.hdmi.enable=true
-persist.sys.ui.hw=true
+persist.sys.ui.hw=1
 debug.gr.numframebuffers=3
 
 # Display configuration 
 windowsmgr.max_events_per_sec=500
+windowsmgr.min_events_per_sec=120
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
@@ -188,43 +156,7 @@ ro.ril.enable.amr.wideband=1
 ro.config.vc_call_steps=20
 ro.config.dha_tunnable=1
 persist.cust.tel.eons=1
-ro.gsm.2nd_data_retry_config=max/_retries=3, 2000, 2000, 2000
-persist.rcs.supported=1
-DEVICE_PROVISIONED=1
-persist.data_netmgrd_mtu=1500
-persist.radio.nr_mode_pref=1
-persist.radio.nr5g_band=78
-persist.radio.nr5g_bandwidth=100
-persist.radio.nr5g_mimo=4x4
-persist.radio.nr5g_scs=30
-ro.ril.enable.5g=1
-ro.ril.enable.nr=1
-ro.ril.nr_mode=1
-ro.ril.nr5g_band=78
-ro.ril.nr5g_bandwidth=100
-ro.ril.nr5g_mimo=4x4
-ro.ril.nr5g_scs=30
-persist.sys.radio.force_lte_ca=true
-persist.radio.lte_vrte_ltd=1
-persist.radio.lte_vrte=1
-persist.radio.lte_vrte_ltd=1
-ro.ril.hsxpa=3
-ro.ril.gprsclass=10
-ro.ril.hsdpa.category=10
-ro.ril.hsupa.category=6
-ro.ril.enable.3g.prefix=1
-ro.ril.enable.dtm=1
-ro.ril.gprsclass=12
-ro.ril.hsdpa.category=14
-ro.ril.hsupa.category=6
-net.tethering.noproxy=true
-ro.carrier=Unknown
-persist.radio.volte.dan_support=true
-persist.radio.rat_on=combine
-persist.radio.data_ltd_sys_ind=1
-persist.radio.data_con_rprt=1
-persist.radio.calls.on.ims=1
-persist.radio.VT_ENABLE=1
+ro.gsm.2nd_data_retry_config=max/_retries=1, 1000, 1000, 1000
 
 # Network configuration
 net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
@@ -277,6 +209,33 @@ net.ipv6.conf.default.accept_redirects=0
 net.ipv6.conf.all.use_tempaddr=2
 net.ipv6.conf.default.use_tempaddr=2
 net.tcp.default_init_rwnd=60
+net.ipv4.icmp_echo_ignore_all=0
+net.ipv4.icmp_echo_ignore_broadcasts=0
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.min_pmtu=1280
+net.ipv4.route.flush=1
+net.ipv4.tcp_abort_on_overflow=0
+net.ipv4.tcp_autocorking=0
+net.ipv4.tcp_ecn=1
+net.ipv4.tcp_ecn_fallback=1
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_fastopen=0
+net.ipv4.tcp_fin_timeout=60
+net.ipv4.tcp_frto=1
+net.ipv4.tcp_frto_response=2
+net.ipv4.tcp_fwmark_accept=1
+net.ipv4.tcp_low_latency=1
+net.ipv4.tcp_mtu_probing=2
+net.ipv4.tcp_no_metrics_save=0
+net.ipv4.tcp_no_ssthresh_metrics_save=0
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_tw_recycle=0
+net.ipv4.tcp_tw_reuse=0
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_workaround_signed_windows=0
+ro.wifi.channels=500
 
 # Launcher configuration
 log.tag.launcher_force_rotate=VERBOSE
@@ -285,5 +244,12 @@ log.tag.launcher_force_rotate=VERBOSE
 lockscreen.rot_override=true
 use.voice.path.for.pcm.voip=true
 ro.hardware.qemu=0
+ro.kernel.android.checkjni=0
+persist.sys.usb.config=mass_storage,mtp
+usb.hs_polling_time=1
+persist.sys.rawinput=true
+persist.game.input.enable=true
+persist.usb.host_controller=1
+persist.usb.host_controller.polling_interval=1
 
 #####Cyberdev#####
