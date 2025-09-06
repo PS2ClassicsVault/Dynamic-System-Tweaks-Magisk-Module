@@ -1,7 +1,12 @@
 Donations:
-https://www.paypal.me/CyberGamingStudios
+https://www.paypal.me/ps2cv
 
 If you encounter bug or issue please submit a new issue ticket!
+
+# v4.5
+- Added tweaks for controllers that use Bluetooth.
+- Added controller improvements
+- Improved existing tweaks.
 
 # v4.4
 - Improved performance
