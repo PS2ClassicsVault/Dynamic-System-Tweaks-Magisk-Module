@@ -1,10 +1,10 @@
 # Dynamic System Tweaks Magisk Module for armeabi-v7a devices
 
 ### Version:
-v4.5
+v4.6
 
 ### Last Updated:
-09/06/25
+10/20/25
 
 ## Description
 This improves overall System performance without overheating and losing battery power for armeabi-v7a devices
@@ -17,7 +17,7 @@ This improves overall System performance without overheating and losing battery 
 ## Requirements:
 - Magisk 20.4 or higher
 - Android 10 or higher
-- Arch: armeabi-v7a
+- Arch: armeabi-v7a or better
 - Rooted device
 
 ## Changelog

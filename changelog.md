@@ -3,6 +3,15 @@ https://www.paypal.me/ps2cv
 
 If you encounter bug or issue please submit a new issue ticket!
 
+# v4.6
+- Improved network performance by reworking the tweaks
+- Improved bluetooth connectivity for controllers
+- Added tweak that enables games frame rate to force default to 60Hz
+- Increased wifi scan to 200 to save power
+- Set windowsmgr per sec min to 60fps and max to 120fps.
+- Set hwui OpenGL to vulkan
+- Added improvements for USB based controllers.
+
 # v4.5
 - Added tweaks for controllers that use Bluetooth.
 - Added controller improvements
